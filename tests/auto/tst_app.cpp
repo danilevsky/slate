@@ -587,7 +587,7 @@ void tst_App::animationPlayback()
     QCOMPARE(layeredImageProject->isUsingAnimation(), false);
 
     QVERIFY2(setAnimationPlayback(true), failureMessage);
-    QVERIFY2(togglePanel("animationPanel", true), failureMessage);
+//    QVERIFY2(togglePanel("animationPanel", true), failureMessage);
 
     // Open the settings popup to modify the settings slightly.
     QQuickItem *animationPanelSettingsToolButton = window->findChild<QQuickItem*>("animationPanelSettingsToolButton");
@@ -652,7 +652,7 @@ void tst_App::animationPlayback()
         animationFrameCountSpinBox->height() / 2), MouseClick);
     QCOMPARE(animationFrameCountSpinBox->property("value").toInt(), 4 + 1);
 
-    // Click in the middle of the slider to increase the sacle.
+    // Click in the middle of the slider to increase the scale.
     QQuickItem *animationPreviewScaleSlider = window->findChild<QQuickItem*>("animationPreviewScaleSlider");
     QVERIFY(animationPreviewScaleSlider);
     mouseEventOnCentre(animationPreviewScaleSlider, MouseClick);
