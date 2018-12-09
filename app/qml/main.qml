@@ -250,9 +250,7 @@ ApplicationWindow {
 
             Ui.AnimationPanel {
                 id: animationPanel
-//                visible: window.project && window.project.loaded && isImageProjectType && window.project.usingAnimation
-                visible: window.project && window.project.loaded && window.projectType === Project.LayeredImageType
-                    && window.project.usingAnimation
+                visible: window.project && window.project.loaded && isImageProjectType && window.project.usingAnimation
                 project: visible ? window.project : null
                 canvas: window.canvas
 
